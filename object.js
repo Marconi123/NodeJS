@@ -20,18 +20,13 @@ schedule["8:30"] = "get up";
 alert(isEmpty(schedule)); // false
 
 function isEmpty(obj) {
-    for (let key in obj) {
-        return false
+    for (let params in obj) {
+        return true
     }
-    return true
-};
+    return false
+}
 
-alert(isEmpty(user));
-
-user.name = 'test'
-
-alert(isEmpty(user));
-
+console.log(isEmpty(schedule));
 /* Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390. Если объект salaries пуст, то результат должен быть 0. */
 
 let salaries = {
@@ -39,27 +34,33 @@ let salaries = {
     Ann: 160,
     Pete: 130
 }
-let sum = 0
-for (let key in salaries) {
-    sum += salaries[key];
+
+let sum = 0;
+
+function countSalaries(object) {
+    for (let name in object) {
+        sum += object[name]
+    }
 }
 
-alert(sum);
+countSalaries(salaries)
 
 
+// Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+// до вызова функции
 let menu = {
     width: 200,
     height: 300,
     title: "My menu"
 };
 
+multiplyNumeric(menu);
 
-function multiplyNumeric(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] == "number") {
-            obj[key] *= 2
-        };
+function multiplyNumeric(object) {
+    for (let param in object) {
+        if (typeof object[param] == 'number') {
+            object[param] *= 2
+        }
     }
 }
-
-multiplyNumeric(menu);
