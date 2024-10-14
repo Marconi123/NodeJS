@@ -32,7 +32,75 @@ undefined + 1 // NaN
 Он работает неправильно. Код в примере выводит 12 (для значения полей по умолчанию).
 правьте её. Результат должен быть 3. */
 
-let f = +prompt("Первое число?", 1);
-let h = +prompt("Второе число?", 2);
+// let f = +prompt("Первое число?", 1);
+// let h = +prompt("Второе число?", 2);
 
-alert(f + h); // !12 => 3
+// alert(f + h); // !12 => 3
+
+// function countPositivesSumNegatives(input) {
+
+//     let positiveNumber = 0;
+//     let sumOfNegative = 0;
+
+//     if (input != null && input.length > 0) {
+//         for (let number of input) {
+//             if (number > 0 && number != 0) {
+//                 positiveNumber += 1
+//             } else { sumOfNegative -= number }
+//         }
+//         return [positiveNumber, -sumOfNegative];
+//     }
+//     return [];
+// }
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+// const array0 = [];
+// console.log(countPositivesSumNegatives(array0));
+
+// function betterThanAverage(classPoints, yourPoints) {
+//     let averageScore = 0;
+
+//     for (let score of classPoints) {
+//         averageScore += score
+//     }
+
+//     return averageScore / classPoints.length > yourPoints ? false : true
+// }
+
+// console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21));
+
+// function grow(x) {
+//     let sum = 1;
+//     for (let number of x) {
+//         number == x[0] ? sum = number : sum *= number;
+//     }
+//     return sum;
+// }
+
+// NEEDS TO BE DONE LATER
+
+// var humanYearsCatYearsDogYears = function (humanYears) {
+//     let catYears = 0;
+//     let dogYears = 0;
+
+//     switch (true) {
+//         case (humanYears = 1):
+//             catYears = 15;
+//             dogYears = 15;
+//             break;
+
+//         case (humanYears = 2):
+//             catYears = 15 + 9
+//             dogYears = 15 + 9
+//             break;
+
+//         case (humanYears > 2):
+//             catYears = 15 + 9 + ((humanYears - 2) * 4)
+//             dogYears = 15 + 9 + ((humanYears - 2) * 5)
+//             break
+//     }
+
+//     return [humanYears, catYears, dogYears];
+// }
+
+// console.log(humanYearsCatYearsDogYears(5));
