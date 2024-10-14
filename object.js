@@ -26,7 +26,7 @@ function isEmpty(obj) {
     return false
 }
 
-console.log(isEmpty(schedule));
+// console.log(isEmpty(schedule));
 /* Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390. Если объект salaries пуст, то результат должен быть 0. */
 
 const salaries = {
@@ -217,9 +217,71 @@ const newID2 = Symbol('test')
 // console.log(`NewID is ${newID.toString()}`)
 // console.log(`NewID description is ${newID.description}`);
 
-// console.log(`NewI2 is ${newID2.toString()}`)
+// console.log(`NewID2 is ${newID2.toString()}`)
 // console.log(`NewID2 description is ${newID2.description}`);
 
 const quarterOf = (month) => {
-    return (month >= 3) ? '1' : (month > 3 && month >= 6) ? '2' : (month > 6 && month <= 9) ? '3' : '4';
+    return (month >= 3) ? '1' :
+        (month > 3 && month >= 6) ? '2' :
+            (month > 6 && month <= 9) ? '3' : '4';
 }
+
+const userVlad = {
+    name: 'Vladislav',
+    surname: 'Galkin',
+    age: 23,
+    age1: 24,
+    age2: 29,
+    friend: ['Danik', 'Vladik', 'Vlados'],
+
+
+
+    // [Symbol.toPrimitive](hint) {
+    //     return hint == 'string' ? `${this.surname}` : this.age
+    // }
+
+    //     toString() {
+    //         return `${this.age2}`
+    //     },
+
+    //     valueOf() {
+    //         return this.age
+    //     }
+}
+
+// console.log(test);
+// alert(test)
+// console.log(test + 23)
+
+
+/* Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+Your tasks:
+1. Foreachofthem,create an object with properties for their fullname, mass,and height (Mark Miller and John Smith)
+2. Createa'calcBMI'method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method
+3. Log to the console who has the higher BMI,together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+*/
+
+function NewUser(fullName, mass, height) {
+    this.fullName = fullName,
+        this.mass = mass,
+        this.height = height,
+        this.bmi;
+
+    NewUser.prototype.calculateBMI = function () {
+        return this.bmi = this.mass / this.height ** 2
+    }
+}
+
+let mark = new NewUser("Mark Miller", 78, 1.69);
+let john = new NewUser("John Smith", 92, 1.95);
+
+john.calculateBMI();
+mark.calculateBMI();
+
+
+console.log(mark.bmi > john.bmi ?
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})` :
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`)
+
+
