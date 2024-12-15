@@ -37,42 +37,42 @@ undefined + 1; // NaN
 
 // alert(f + h); // !12 => 3
 
-// function countPositivesSumNegatives(input) {
+function countPositivesSumNegatives(input) {
 
-//     let positiveNumber = 0;
-//     let sumOfNegative = 0;
+    let positiveNumber = 0;
+    let sumOfNegative = 0;
 
-//     if (input != null && input.length > 0) {
-//         for (let number of input) {
-//             if (number > 0 && number != 0) {
-//                 positiveNumber += 1
-//             } else { sumOfNegative -= number }
-//         }
-//         return [positiveNumber, -sumOfNegative];
-//     }
-//     return [];
-// }
+    if (input != null && input.length > 0) {
+        for (let number of input) {
+            if (number > 0 && number != 0) {
+                positiveNumber += 1
+            } else { sumOfNegative -= number }
+        }
+        return [positiveNumber, -sumOfNegative];
+    }
+    return [];
+}
 
-// const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
-// const array0 = [];
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15];
+const array0 = [];
 // console.log(countPositivesSumNegatives(array0));
 
-// function betterThanAverage(classPoints, yourPoints) {
-//     let averageScore = 0;
+function betterThanAverage(classPoints, yourPoints) {
+    let averageScore = 0;
 
-//     for (let score of classPoints) {
-//         averageScore += score
-//     }
+    for (let score of classPoints) {
+        averageScore += score
+    }
 
-//     return averageScore / classPoints.length > yourPoints ? false : true
-// }
+    return averageScore / classPoints.length > yourPoints ? false : true
+}
 
 // console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21));
 
-// function grow(x) {
-//     let sum = 1;
-//     for (let number of x) {
-//         number == x[0] ? sum = number : sum *= number;
-//     }
-//     return sum;
-// }
+function grow(x) {
+    let sum = 1;
+    for (let number of x) {
+        number == x[0] ? sum = number : sum *= number;
+    }
+    return sum;
+}

@@ -1,6 +1,6 @@
 'use strict';
-// let array1 = Array();
-// let array2 = [];
+let array1 = Array();
+let array2 = [];
 
 
 // array2 = ['test', 'test2', 'test3']
@@ -16,28 +16,28 @@
 // console.log(array2.at(-1));
 
 
-// array1 = ['test', 'test2', 'test3'];
-// array1.push('testAdd');
+array3 = ['test', 'test2', 'test3'];
+array3.push('testAdd');
 // console.log(array1); //test, test2, test3, testAdd
-// const testPop = array1.pop() //test, test2, test3
+const testPop = array1.pop() //test, test2, test3
 // console.log(`testPop equals ${testPop}`); //testAdd
-// const testShift = array1.shift() //test
+const testShift = array1.shift() //test
 // console.log(`testShift equals ${testShift}`); //test
-// array1.unshift('testUnshift') //testUnshift, test2, test3
+array3.unshift('testUnshift') //testUnshift, test2, test3
 // console.log(array1);
 
 
-// for (let i = 0; i < array1.length; i++) {
-//     console.log(array1[i]);
-// };
+for (let i = 0; i < array1.length; i++) {
+    // console.log(array1[i]);
+};
 
-// for (let name of array1) {
-//     console.log(name);
-// }
-// // not a good idea to use it
-// for (let key in array1) {
-//     console.log(array1[key])
-// };
+for (let name of array1) {
+    // console.log(name);
+}
+// not a good idea to use it
+for (let key in array1) {
+    // console.log(array1[key])
+};
 
 
 // Давайте произведём 5 операций с массивом.
@@ -55,17 +55,17 @@
 // Классика, Рок-н-ролл
 // Рэп, Регги, Классика, Рок-н-ролл
 
-// let styles = ['Джас', 'Блюз'];
-// styles.push('«Рок-н-ролл»');
-// // styles[Math.floor((styles.length - 1) / 2)] = "Классика";
+let styles = ['Джас', 'Блюз'];
+styles.push('«Рок-н-ролл»');
+styles[Math.floor((styles.length - 1) / 2)] = "Классика";
 // console.log(styles.shift());
-// styles.unshift('Рэп', 'Регги');
+styles.unshift('Рэп', 'Регги');
 
 // let arr = ["a", "b"];
 
-// arr.push(function () {
-//     alert(this);
-// })
+arr.push(function () {
+    // alert(this);
+})
 
 // arr[2]();
 
