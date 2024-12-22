@@ -76,10 +76,10 @@ const person = {
 
 let map2 = new Map();
 map2.set("name", "John");
-console.log(map2)
+// console.log(map2)
 let keys = Array.from(map2.keys())
 keys.push("more");
-console.log(keys)
+// console.log(keys)
 
 
 function clearok(arr) {
@@ -129,4 +129,66 @@ function count(obj) {
   return Object.keys(obj).length
 }
 
-console.log(count(user));
+let {height, width, title} = { title: "Menu", height: 200, width: 100 }
+// console.log(`Height: ${height}, Width:${width}, Title:${title}`)
+
+
+/* Создайте функцию topSalary(salaries), которая возвращает имя самого высокооплачиваемого сотрудника.
+Если объект salaries пустой, то нужно вернуть null.
+Если несколько высокооплачиваемых сотрудников, можно вернуть любого из них.
+P.S. Используйте Object.entries и деструктурирование, чтобы перебрать пары ключ/значение. */
+
+let salaries5 = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+
+function topSalary(salaries) {
+
+  let highSalaryName = null;
+  let highSalary = 0;
+
+  for (let [name, salary] of Object.entries(salaries)){
+    if (salary > highSalary){
+      highSalary = salary
+      highSalaryName = name
+    }
+  }  
+  return highSalaryName
+};
+
+// topSalary(salaries5)
+
+
+
+const objectTest = {
+  name: 'Vlad',
+  surname: 'Galkin',
+  specData:{ 
+    age: 19,
+    familySize: 5,
+    friends: ['Danik', 'Vladik'],
+    friendsInformation: [
+      {
+        name: 'Vladik',
+        age: 22
+      },
+      {
+        name: 'Danik',
+        age: 23
+      }
+    ]
+  }
+}
+
+const {
+  name:n, 
+  specData: 
+    {
+    friends, 
+    friendsInformation
+  }
+} = objectTest;
+
