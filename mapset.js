@@ -159,7 +159,7 @@ function topSalary(salaries) {
   return highSalaryName
 };
 
-// topSalary(salaries5)
+// console.log(topSalary(salaries5))
 
 
 

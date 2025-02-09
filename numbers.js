@@ -59,3 +59,4 @@ function randomInteger(min, max) {
 
 let y = randomInteger(2, 5);
 console.log(y);
+
